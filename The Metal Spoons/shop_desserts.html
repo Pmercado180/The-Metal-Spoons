@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Custom Desserts Shop</title>
+   <link rel="stylesheet" href="base.css">
+   <link rel="stylesheet" href="menu.css">
+   <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+    <header>
+      <img src="logo.png" alt="The Metal Spoons Logo" style="height:48px; width:auto; margin-right:16px; border-radius:8px;">
+        The Metal Spoons
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="shop_desserts.html" class="active">Shop Desserts</a>
+        </nav>
+    </header>
+   <main>
+   <section>
+      <h2>Shop Custom Desserts</h2>
+      <p>Order our signature desserts for your next event or special treat. Gluten-Free, Dairy-Free, and Vegan Options Available.</p>
+      <div class="menu-list">
+         <div class="menu-item">
+            <img src="dessert1.jpeg" alt="Sweet Passionfruit Mousse">
+            <span>Sweet Passionfruit Mousse</span>
+            <span style="margin-left:auto; color:#444;">$22.00</span>
+            <button onclick="addToCart('Sweet Passionfruit Mousse', 22)">Add to Cart</button>
+         </div>
+         <div class="menu-item">
+            <img src="dessert2.jpeg" alt="Classic Cannolli Cake">
+            <span>Classic Cannolli Cake</span>
+            <span style="margin-left:auto; color:#444;">$26.00</span>
+            <button onclick="addToCart('Classic Cannolli Cake', 26)">Add to Cart</button>
+         </div>
+         <div class="menu-item">
+            <img src="dessert3.jpeg" alt="Orange Vanilla Bundt Cake">
+            <span>Orange Vanilla Bundt Cake</span>
+            <span style="margin-left:auto; color:#444;">$30.00</span>
+            <button onclick="addToCart('Orange Vanilla Bundt Cake', 30)">Add to Cart</button>
+         </div>
+         <div class="menu-item">
+            <img src="dessert4.jpeg" alt="Vegan Chocolate Strawberry Bundt">
+            <span>Vegan Chocolate Strawberry Bundt</span>
+            <span style="margin-left:auto; color:#444;">$36.00</span>
+            <button onclick="addToCart('Vegan Chocolate Strawberry Bundt', 36)">Add to Cart</button>
+         </div>
+         <div class="menu-item">
+            <img src="dessert5.jpeg" alt="Chocoflan">
+            <span>Chocoflan</span>
+            <span style="margin-left:auto; color:#444;">$34.00</span>
+            <button onclick="addToCart('Chocoflan', 34)">Add to Cart</button>
+         </div>
+      </div>
+   </section>
+   <section>
+      <h2>Your Cart</h2>
+      <div id="cart">
+         <ul id="cart-items"></ul>
+         <p id="cart-total">Total: $0.00</p>
+      </div>
+   </section>
+   </main>
+   <script src="shop.js"></script>
+   <footer>
+   <div class="footer-brand">The Metal Spoons</div>
+   <div class="footer-connect" style="font-size:1.05em; color:#e0c9a6; margin-bottom:8px;">
+      Let's Connect! Questions, custom orders, or culinary ideas? Drop us a line—we’d love to hear from you!
+   </div>
+   <div class="footer-info">
+      <span>Daniel Vazquez</span>
+      <span class="footer-sep">|</span>
+      <span>(407) 947-9085</span>
+   </div>
+   <div class="footer-copy">Copyright &copy; 2024 The Metal Spoon - All Rights Reserved.</div>
+</footer>
+</body>
+</html>

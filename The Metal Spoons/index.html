@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Home - The Metal Spoons</title>
+   <link rel="stylesheet" href="base.css">
+   <link rel="stylesheet" href="menu.css">
+   <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+   <header>
+      <img src="logo.png" alt="The Metal Spoons Logo" style="height:48px; width:auto; margin-right:16px; border-radius:8px;">
+      The Metal Spoons
+      <nav>
+         <a href="index.html" class="active">Home</a>
+         <a href="menu.html">Menu</a>
+         <a href="shop_desserts.html">Shop Desserts</a>
+      </nav>
+   </header>
+   <main>
+      <section>
+      <h2>Welcome to The Metal Spoons</h2>
+      <p>Experience culinary artistry and warm hospitality. Explore our menu, discover our story, or shop our signature desserts.</p>
+   </section>
+    <section class="feature-slider">
+      <div class="slider-images">
+         <img src="entree1.jpeg" alt="Entree 1" class="slider-img active">
+         <img src="entree2.jpeg" alt="Entree 2" class="slider-img">
+         <img src="dessert5.jpeg" alt="Chocoflan" class="slider-img">
+      </div>
+      <div class="slider-buttons">
+         <a href="menu.html" class="slider-btn">Explore Our Menu</a>
+         <a href="shop_desserts.html" class="slider-btn">Shop Our Desserts</a>
+      </div>
+      <div class="slider-nav">
+         <button class="slider-dot active"></button>
+         <button class="slider-dot"></button>
+         <button class="slider-dot"></button>
+      </div>
+   </section>   
+   <section>
+      <h2>Our Mission &amp; Goal</h2>
+      <p>
+         What if a meal could do more than nourish—what if it could invite us into someone else's story? In the hands of Chef Daniel Vazquez, every plate becomes a passage through culture, comfort, and connection.
+         </p>
+      <blockquote style="font-style:italic; color:#7c4f1d; border-left:4px solid #a67c52; margin:24px 0; padding:12px 24px; background:rgba(166,124,82,0.06); border-radius:8px;">
+         "My goal is to introduce my diners to comfort foods from cultures around the world, transporting them into the homes of others they may never meet. I believe whatever differences we may have in this world, we are forever linked by a common thread: Cuisine."
+         <br>
+         <span style="display:block; margin-top:8px; font-weight:500; color:#414345;">— Daniel Vazquez, Head Chef &amp; Owner</span>
+      </blockquote>
+   </section>
+
+   <section style="display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:36px; margin-top:48px;">
+      <img src="Our_family.jpeg" alt="Our Family" style="max-width:340px; width:100%; border-radius:16px; box-shadow:0 4px 16px rgba(51,51,51,0.13);">
+      <div style="max-width:520px;">
+         <h2>We Treat Everyone Like Our Own—Our Family</h2>
+         <p>
+            Some chefs chase innovation. Others chase nostalgia. But what happens when cooking becomes something even more personal—a way to shape memory, stir joy, and connect past to present?
+         </p>
+         <blockquote style="font-style:italic; color:#7c4f1d; border-left:4px solid #a67c52; margin:24px 0; padding:12px 24px; background:rgba(166,124,82,0.06); border-radius:8px;">
+            "Cooking for others brings me a joy I never experienced before in my life. I have the opportunity to become the author of new food memories and the bridge to nostalgia from our past."
+            <br>
+            <span style="display:block; margin-top:8px; font-weight:500; color:#414345;">— Daniel Vazquez,  Head Chef &amp; Owner</span>
+         </blockquote>
+      </div>
+   </section>
+   </main>
+   <footer>
+   <div class="footer-brand">The Metal Spoons</div>
+   <div class="footer-connect" style="font-size:1.05em; color:#e0c9a6; margin-bottom:8px;">
+      Let's Connect! Questions, custom orders, or culinary ideas? Drop us a line—we’d love to hear from you!
+   </div>
+   <div class="footer-info">
+      <span>Daniel Vazquez</span>
+      <span class="footer-sep">|</span>
+      <span>(407) 947-9085</span>
+   </div>
+   <div class="footer-copy">Copyright &copy; 2024 The Metal Spoon - All Rights Reserved.</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+   const images = document.querySelectorAll('.slider-img');
+   const dots = document.querySelectorAll('.slider-dot');
+   let current = 0;
+
+   function showSlide(idx) {
+      images.forEach((img, i) => {
+         img.classList.toggle('active', i === idx);
+         dots[i].classList.toggle('active', i === idx);
+      });
+      current = idx;
+   }
+
+   dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => showSlide(i));
+   });
+
+   setInterval(() => {
+      showSlide((current + 1) % images.length);
+   }, 5000);
+});
+</script>
+</body>
+</html>
